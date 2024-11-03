@@ -5,6 +5,12 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarktguruAssignment.API", "MarktguruAssignment.API.csproj", "{A8A1F324-A901-4AE8-8EA7-C327986B11AE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarktguruAssignment.DataModels", "..\MarktguruAssignment.DataModels\MarktguruAssignment.DataModels.csproj", "{F04569B8-3DF5-4CDA-9534-17AECBCDFC29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marktguru.DataAccess", "..\Marktguru.DataAccess\Marktguru.DataAccess.csproj", "{58A2D3AB-A680-4180-9E71-CD7773864938}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MarktGuruSQLDB", "..\MarktGuruDB\MarktGuruSQLDB.sqlproj", "{4BD15634-5110-435D-BC58-5F1ED28DF446}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,20 @@ Global
 		{A8A1F324-A901-4AE8-8EA7-C327986B11AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8A1F324-A901-4AE8-8EA7-C327986B11AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8A1F324-A901-4AE8-8EA7-C327986B11AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F04569B8-3DF5-4CDA-9534-17AECBCDFC29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F04569B8-3DF5-4CDA-9534-17AECBCDFC29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F04569B8-3DF5-4CDA-9534-17AECBCDFC29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F04569B8-3DF5-4CDA-9534-17AECBCDFC29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A2D3AB-A680-4180-9E71-CD7773864938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A2D3AB-A680-4180-9E71-CD7773864938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A2D3AB-A680-4180-9E71-CD7773864938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A2D3AB-A680-4180-9E71-CD7773864938}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BD15634-5110-435D-BC58-5F1ED28DF446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BD15634-5110-435D-BC58-5F1ED28DF446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BD15634-5110-435D-BC58-5F1ED28DF446}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4BD15634-5110-435D-BC58-5F1ED28DF446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BD15634-5110-435D-BC58-5F1ED28DF446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BD15634-5110-435D-BC58-5F1ED28DF446}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
