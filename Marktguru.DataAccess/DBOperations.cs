@@ -1,8 +1,7 @@
 ﻿using Marktguru.DataAccess.DataBaseComponents;
 using Marktguru.DataAccess.Transactions;
-using System.Data.SqlClient;
 using System.Data;
-using System.Collections;
+using System.Data.SqlClient;
 
 namespace Marktguru.DataAccess
 {
@@ -11,7 +10,6 @@ namespace Marktguru.DataAccess
     /// </summary>
     public sealed class DBOperations
     {
-
         private readonly String Connection;
 
         private AdoComponents _component;
@@ -35,7 +33,6 @@ namespace Marktguru.DataAccess
         {
             Connection = connection;
         }
-
 
         private SqlCommand _CreateCommand(string commandText, Dictionary<string,dynamic> ? parameters)
         {
@@ -61,7 +58,7 @@ namespace Marktguru.DataAccess
         }
 
         /// <summary>
-        /// Inserts or updates the tables.
+        /// Inserts or updates the record.
         /// </summary>
         /// <param name="commandText">String</param>
         /// <param name="parameters"><see cref="Dictionary{TKey, TValue}"/></param>

@@ -4,6 +4,9 @@ using System.Data.SqlClient;
 
 namespace Marktguru.DataAccess.DataBaseComponents
 {
+    /// <summary>
+    /// Responsible to perform the Sql Command Operations
+    /// </summary>
     internal class AdoComponents
     {
         private readonly ICustomSqlTransactions _Transactions;

@@ -4,12 +4,15 @@ using Microsoft.Extensions.Options;
 
 namespace MarktguruAssignment.API.Middlleware
 {
+    /// <summary>
+    /// Respomnsible for Authentication
+    /// </summary>
     public class AuthenticationMiddleware
     {
         private readonly RequestDelegate _next;
-
         
         private JWTConfigurationSettings _jWTSettings { get; }
+        
         public AuthenticationMiddleware(RequestDelegate next, IOptions<JWTConfigurationSettings> config)
         {
             _next = next;

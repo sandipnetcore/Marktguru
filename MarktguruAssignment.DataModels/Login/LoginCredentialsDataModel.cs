@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MarktguruAssignment.DataModels.Login
 {
+    /// <summary>
+    /// Login Model
+    /// </summary>
     public class LoginCredentialsDataModel
     {
         public string UserName { get; set; }

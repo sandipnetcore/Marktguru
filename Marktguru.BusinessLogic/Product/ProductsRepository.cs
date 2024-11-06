@@ -3,7 +3,6 @@ using Marktguru.DataAccess;
 using Marktguru.DataAccess.CommandNames;
 using MarktguruAssignment.DataModels.ModelExtension;
 using MarktguruAssignment.DataModels.Product;
-using Microsoft.Extensions.Options;
 
 namespace Marktguru.BusinessLogic.Product
 {
@@ -17,9 +16,9 @@ namespace Marktguru.BusinessLogic.Product
     public class ProductsRepository
     {
         private ConnectionStringConfiguration _ConfigurationSettings { get; set; }
-        public ProductsRepository(IOptions<ConnectionStringConfiguration> config) 
+        public ProductsRepository(ConnectionStringConfiguration config) 
         {
-            _ConfigurationSettings = config.Value;
+            _ConfigurationSettings = config;
         }
 
         /// <summary>

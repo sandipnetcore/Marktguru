@@ -7,6 +7,8 @@ namespace MarktguruAssignment.API.Attributes
 {
     /// <summary>
     /// Manage the authorization with this filter.
+    /// We are using filter because it is required only by the ProductController.
+    /// Else we can use it globally in the middleware.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public class AuthorizeAttribute : Attribute, IAuthorizationFilter
