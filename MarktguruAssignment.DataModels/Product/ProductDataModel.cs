@@ -1,5 +1,11 @@
 ﻿namespace MarktguruAssignment.DataModels.Product
 {
+    /// <summary>
+    /// Product Data representation
+    /// The data model should be independent.
+    /// Datamodel can be used in any project.
+    /// Datamodel should be mapped witg the database objects (DataTable)
+    /// </summary>
     public class ProductDataModel
     {
         /// <summary>

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MarktguruAssignment.DataModels.Product
+﻿namespace MarktguruAssignment.DataModels.Product
 {
     public class ProductDetailDataModel: ProductDataModel
     {
         /// <summary>
-        /// Product Description
+        /// Product Description representation.
         /// </summary>
         public string ProductDescription { get; set; }
     }

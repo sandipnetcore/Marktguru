@@ -12,7 +12,7 @@ namespace MarktguruAssignment.API.Logging
         /// </summary>
         /// <param name="builder"></param>
         /// <param name="configure"></param>
-        /// <returns></returns>
+        /// <returns>ILoggingBuilder</returns>
         public static ILoggingBuilder AddFileLogger(
             this ILoggingBuilder builder,
             Action<FileLoggingOptions> configure)

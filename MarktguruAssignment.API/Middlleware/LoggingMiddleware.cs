@@ -1,10 +1,7 @@
-﻿using Marktguru.BusinessLogic.Users;
-using Microsoft.AspNetCore.Http;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 
 namespace MarktguruAssignment.API.Middlleware
 {
-    // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     /// <summary>
     /// Logg any errors with the incoming request or outgoing responses;
     /// </summary>

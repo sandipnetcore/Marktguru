@@ -28,12 +28,12 @@ namespace MarktguruAssignment.API.Controllers
         /// <param name="PageNumber">int</param>
         /// <param name="PageSize">int</param>
         /// <returns><see cref="List{ProductDataModel}"/></returns>
-        [MarktguruAttributes.Authorize(Roles.AdminRole)]
         [HttpGet("AllProducts/{PageNumber}/{PageSize}")]
         public async Task<IActionResult> Get(int PageNumber, int PageSize)
         {
-            ProductsRepository productsRepository = new ProductsRepository(_Options);
-            return Ok(await productsRepository.GetProducts(PageNumber, PageSize));
+            ProductsRepository productsRepository = new ProductsRepository(_Options.Value);
+            var results = await productsRepository.GetProducts(PageNumber, PageSize);
+            return Ok((results != null && results.Count > 0)? results:"No records found");
         }
 
         /// <summary>
@@ -44,8 +44,9 @@ namespace MarktguruAssignment.API.Controllers
         [HttpGet("ProductDetails/{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            ProductsRepository productsRepository = new ProductsRepository(_Options);
-            return Ok(await productsRepository.GetProductDetails(id));
+            ProductsRepository productsRepository = new ProductsRepository(_Options.Value);
+            var productDetails = await productsRepository.GetProducts(id);
+            return Ok(productDetails != null && productDetails.Count>0 ? productDetails:"No records found");
         }
 
 
@@ -63,7 +64,7 @@ namespace MarktguruAssignment.API.Controllers
                 return StatusCode(403, "Product specs are not given");
             }
 
-            ProductsRepository productsRepository = new ProductsRepository(_Options);
+            ProductsRepository productsRepository = new ProductsRepository(_Options.Value);
             var result = await productsRepository.CreateProduct(product);
 
             return Ok("Product added successfully!");
@@ -84,7 +85,7 @@ namespace MarktguruAssignment.API.Controllers
                 return StatusCode(403, "Product specs are not given");
             }
 
-            ProductsRepository productsRepository = new ProductsRepository(_Options);
+            ProductsRepository productsRepository = new ProductsRepository(_Options.Value);
             var result = await productsRepository.UpdateProduct(product);
 
             return Ok("Product updated successfully!");
@@ -100,7 +101,7 @@ namespace MarktguruAssignment.API.Controllers
         [HttpDelete("DeleteProduct/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            ProductsRepository productsRepository = new ProductsRepository(_Options);
+            ProductsRepository productsRepository = new ProductsRepository(_Options.Value);
             var result = await productsRepository.DeleteProduct(id);
 
             return Ok("Product deleted successfully!");

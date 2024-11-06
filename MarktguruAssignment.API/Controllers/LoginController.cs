@@ -33,7 +33,7 @@ namespace MarktguruAssignment.API.Controllers
 
             if(string.IsNullOrEmpty(token))
             {
-                return Unauthorized();
+                return Unauthorized("No user found");
             }
             
             return Ok(new {token});

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Marktguru.BusinessLogic.Configurations
+﻿namespace Marktguru.BusinessLogic.Configurations
 {
     /// <summary>
     /// A class that holds only the configuration that is needed for creation and validation of JWT.
@@ -17,7 +11,7 @@ namespace Marktguru.BusinessLogic.Configurations
         public string IssuerUrl { get; set; }
         
         /// <summary>
-        /// Audience URL. Making it array of string, as we can have multiple audience
+        /// Audience URL. 
         /// </summary>
         public string AudienceUrl { get; set; }
 

@@ -1,24 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Marktguru.BusinessLogic.Users
+﻿namespace Marktguru.BusinessLogic.Users
 {
+    /// <summary>
+    /// User 
+    /// </summary>
     public class User
     {
+        /// <summary>
+        /// Id from the database
+        /// </summary>
         public int Id { get; set; }
 
+        /// <summary>
+        /// User Name
+        /// </summary>
         public string UserName { get; set; }
 
+        /// <summary>
+        /// User Password
+        /// </summary>
         public string Password { get; set; }
 
+        /// <summary>
+        /// Roles Defined for the User. 
+        /// User can have multiple users
+        /// </summary>
         public List<string> UserRoles { get; set; }
 
 
         /// <summary>
-        /// This is dummy UserList. In realtime we can directly query it from the Database
+        /// This is dummy UserList. In realtime we can directly query it from the Database.
         /// </summary>
         internal static List<User> AllUsers
         {
@@ -52,10 +62,22 @@ namespace Marktguru.BusinessLogic.Users
         }
     }
 
+    /// <summary>
+    /// We will use this while creating/updating/ deleting the product.
+    /// We are using authorization, but for more convinience I created the roles.
+    /// Though roles were not asked
+    /// </summary>
     public static class Roles
     {
+        /// <summary>
+        /// Performs only admin roles.
+        /// </summary>
         public const string AdminRole = "Admin";
 
+
+        /// <summary>
+        /// Performs only the User roles
+        /// </summary>
         public const string UserRole = "User";
     }
 }

@@ -6,16 +6,22 @@ namespace Marktguru.DataAccess.Transactions
 {
     internal class CustomSqlTransactions : ICustomSqlTransactions
     {
-
+        /// <summary>
+        /// Sql Connection Object
+        /// </summary>
         public SqlConnection sqlConnection
         {
             get;
         }
 
+        /// <summary>
+        /// Sql Transaction
+        /// </summary>
         public SqlTransaction sqlTransaction
         {
             get; private set;
         }
+
 
         internal CustomSqlTransactions(string connection)
         {

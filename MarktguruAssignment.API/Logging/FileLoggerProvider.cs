@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace MarktguruAssignment.API.Logging
 {
     /// <summary>
-    /// Provider
+    /// Provider for File Logger
     /// </summary>
     [ProviderAlias("FileLogger")]
     public class FileLoggerProvider: ILoggerProvider
     {
-
         internal readonly FileLoggingOptions _LoggingOptions;
+        
         public FileLoggerProvider([NotNull] IOptions<FileLoggingOptions> LoggingOptions)
         {
             _LoggingOptions = LoggingOptions.Value;
